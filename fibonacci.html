@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci series upto n using recursive function</title>
+</head>
+<body>
+    Input any integer: <input type = "number" id="numid"><br>
+    <p id="result"></p>
+        <p id="fiboid"> Fibonacci is </p>
+       
+    <button onclick = "FindFact();">Calculate Factorial</button>
+    <script>
+        function FindFact() {
+            var num = document.getElementById("numid").value;
+            var n = Number(num);
+            
+            document.getElementById("result").innerHTML ="The factorial=" + Factorial(n);
+            for(i=0; i<n; i++)
+            document.getElementById("fiboid").innerHTML += Fibonacci(i);
+        }
+        function Fibonacci(n) {
+            if (n==0 || n==1)
+            return n;
+        else
+        return Fibonacci(n - 1) + Fibonacci(n-2);
+        }
+        function Factorial(a) {
+            if (a==0 || a==1)
+            return 1;
+        else
+        return a * Factorial(a - 1);
+        }
+    </script>
+</body>
+</html>

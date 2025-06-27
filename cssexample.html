@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Examples</title>
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: wheat;
+            margin: 0;
+            padding: 0;
+        }
+        .internal-style {
+            color: blue;
+            text-align: center;
+            margin: 20px;
+        }
+        /* External CSS - Typically this would be in a separate file */
+        .external-style {
+            color: red;
+            font-weight: bold;
+            text-align: right;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="internal-style">This is a Heading with Internal CSS</h1>
+    <p style="color: green; font-size: 20px;">This is a paragraph with Inline CSS</p>
+    <p class="external-style">This is a paragraph with External CSS</p>
+</body>
+</html>

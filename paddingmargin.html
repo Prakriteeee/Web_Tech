@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding and Margin Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .box {
+            background-color: green; /* Green background */
+            color: white;
+            width: 200px;
+            height: 100px;
+            margin: 20px; /* Margin creates space outside the border */
+            padding: 20px; /* Padding creates space inside the border */
+            border: 2px solid black; /* Black border for visibility */
+        }
+        .container {
+            background-color: lightgray; /* Light gray background for container */
+            padding: 10px; /* Padding to add space inside container */
+            border: 1px solid black; /* black border for container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box with Margin and Padding
+        </div>
+    </div>
+    <div class="container">
+        <div class="box" style="margin: 0;">
+            Box with No Margin
+        </div>
+    </div>
+    <div class="container">
+        <div class="box" style="padding: 0;">
+            Box with No Padding
+        </div>
+    </div>
+</body>
+</html>

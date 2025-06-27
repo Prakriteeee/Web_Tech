@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Input Times:<br>
+    Nepal: <input type = "number" id="hn" placeholder="hour"><input type = "number" id="mn" placeholder="
+    minute"><input type = "number" id="sn" placeholder="second">
+    USA: <input type = "number" id="hu" placeholder="hour"><input type = "number" id="mu" placeholder="minute"><input type = "number" id="su" placeholder="second">
+    <button onclick = "Difference()">Difference</button>
+    <h3 id ="cid"></h3>
+    <script>
+        function ConvertIntoSeconds (hour, minute, second){
+            return (hour * 3600 + minute * 60 + second);
+        }
+        function Difference(){
+            var hourn = Number (document.getElementById("hn").value);
+            var minuten = Number (document.getElementById("mn").value);
+            var secondn = Number (document.getElementById("sn").value);
+            var tsn = ConvertIntoSeconds(hourn, minuten, secondn);
+            var houru = Number (document.getElementById("hu").value);
+            var minuteu = Number (document.getElementById("mu").value);
+            var secondu = Number (document.getElementById("su").value);
+            var tsu = ConvertIntoSeconds(houru, minuteu, secondu);
+            var ds = tsn - tsu;
+            var hr = Math.ceil( ds/ 3600);
+            var rsec = ds % 3600;
+            var min = Math.ceil (resc / 60);
+            var sec = Math.ceil(min % 60);
+            document.getElementById("cid").innerHTML = hr+":" +min+ ":" +sec +".";
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="/submit" method="post">
+        <h1>Registration Form</h1>
+        <label for="name">Name:</label>
+        <input type="name" id="username" name="username" required><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="Male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" pattern="[0-9]{10}"  placeholder="0123456789" required> <br>
+    
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="abcd@gmail.com" required><br>
+
+        <input type="submit" name="SubmitBtn">
+    </form>
+</body>
+</html>

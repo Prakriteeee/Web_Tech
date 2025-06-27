@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events Example</title>
+</head>
+<body>
+    <h1>HTML Events Example</h1>
+
+    <h2>Mouse Events</h2>
+    <button onclick="this.innerHTML = new Date().toLocaleTimeString()">The time is?</button>
+    <p onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">Hover over this text to change its color.</p>
+
+    <h2>Keyboard Events</h2>
+    <input type="text" onkeydown="alert('Key down event detected!')" placeholder="Press a key inside me">
+    <input type="text" onkeyup="alert('Key up event detected!')" placeholder="Release a key inside me">
+
+    <h2>Form Element Events</h2>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" onchange="alert('Username changed!')" placeholder="Enter your username"><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" oninput="alert('Age input changed!')" placeholder="Enter your age"><br><br>
+        <input type="submit" value="Submit" onclick="alert('Form submitted!'); return false;">
+    </form>
+
+    <h2>Other Events</h2>
+    <select onchange="alert('Selection changed!')">
+        <option value="Option1">Option 1</option>
+        <option value="Option2">Option 2</option>
+        <option value="Option3">Option 3</option>
+    </select>
+</body>
+</html>

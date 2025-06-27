@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in JS</title>
+</head>
+<body>
+    Input any integer: <input type = "number" id="numid"><br>
+    <p id="result">The factorial = </p>
+    <button onclick = "FindFact();">Calculate Factorial</button>
+    <script>
+        function FindFact() {
+            var num = document.getElementById("numid").value;
+            var n = Number(num);
+            
+            document.getElementById("result").innerHTML ="The factorial=" + Factorial(n);
+        }
+        function Factorial(a) {
+            if (a==0 || a==1)
+            return 1;
+        else
+        return a * Factorial(a - 1);
+        }
+    </script>
+</body>
+</html>
